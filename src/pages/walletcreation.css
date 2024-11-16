@@ -1,0 +1,209 @@
+/* General Styling */
+.wallet-creation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+    max-width: 850px !important;
+   
+    margin: 50px auto;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.wallet-creation-title {
+    font-size: 40px;
+    color: red;
+    
+    text-shadow: 0 0 10px rgba(245, 222, 179, 0.8), /* Inner Light Gold glow */
+    0 0 20px rgba(218, 165, 32, 0.6),  /* Mid-range Metallic Gold glow */
+    0 0 30px #FFD700; /* Outer Dark Gold glow */
+    filter: brightness(1.2) contrast(1.1);
+    margin:50px 30px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Button Styling */
+.create-wallet-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+    border: none;
+    text-align: center;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    margin-top: 50px;
+    border: 2px solid gold;
+    align-items: center;
+}
+
+.create-wallet-button i {
+    margin-right: 10px;
+}
+
+.create-wallet-button:hover {
+    background-color:#fff;
+    color: #000;
+    border: 2px solid gold;
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #222;
+    padding: 30px;
+    border: 2px solid gold;
+    border-radius: 15px;
+    text-align: center;
+    width: 350px;
+    color: white;
+}
+
+/* Wallet Details */
+.wallet-details {
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid gold;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wallet-details h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.wallet-card {
+    background-color: #fff;
+    padding: 20px;
+    color: #000;
+    width: 600px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wallet-card strong {
+    color: red;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.wallet-details p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
+}
+
+.create-wallet-button:disabled {
+    background-color: #ccc;  /* Dims the button */
+    cursor: not-allowed;     /* Changes cursor to indicate disabled state */
+}
+
+/* Error Styling */
+.error {
+    color: red;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Next Button Styling */
+.next-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: gold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.next-button:hover {
+    background-color: rgb(239, 225, 144);
+    color: #000;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .wallet-creation {
+     padding: 20px;
+    height: 100vh !important;
+    margin: 0  auto;
+ overflow-x: hidden;
+   
+    }
+    
+
+    .wallet-creation-title {
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .create-wallet-button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-top: 30px;
+    }
+
+    .modal-content {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .wallet-details {
+   margin: 50px 0;
+        width: 80%; /* Full width */
+        padding: 15px;
+    }
+
+    .wallet-card {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .wallet-card strong {
+        font-size: 18px;
+    }
+    .wallet-card p   {
+        word-wrap: break-word !important;  /* Ensures text wraps if it exceeds the container */
+        white-space: normal !important;    /* Allows text to wrap and break into new lines */
+     
+     
+    }
+   
+    .next-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Tablets (Small to Medium Screens) */
+
+
+

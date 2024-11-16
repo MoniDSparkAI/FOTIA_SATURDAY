@@ -1,0 +1,54 @@
+/* Style for the container */
+.mlm-report-container {
+    font-family: Arial, sans-serif; /* Set font for the entire page */
+    margin: 50px 20px;
+    padding: 20px;
+    background-color: var(--text-color); /* Light background for the component */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the container */
+  }
+  
+  /* Header style */
+  .mlm-report-header {
+    text-align: center; /* Center align the header */
+    color: var(--background-color); /* Dark text color */
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* List style for displaying users */
+  .mlm-report-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+  }
+  
+  .mlm-report-list-item {
+    background-color: var(--background-color); /* White background for each list item */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px; /* Rounded corners for list items */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Light shadow for list items */
+    font-size: 16px; /* Increase font size for readability */
+    color: var(--text-color); /* Darker text color for the list */
+  }
+  
+  /* Button style */
+  .mlm-report-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto; /* Center the button horizontally */
+    padding: 10px;
+    background-color: gold; /* Blue background for the button */
+    color: #000; /* White text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mlm-report-button:hover {
+    background-color: rgb(225, 191, 21); /* Darker blue when hovering */
+    color: #fff;
+  }
+  

@@ -1,0 +1,51 @@
+.userdashboard-markets-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hide horizontal and vertical overflow */
+}
+.marketsection-heading 
+{
+  color: var(--text-color); /*changes*/
+  text-align: center;
+  margin-bottom: 20px;
+}
+.userdashboard-markets-scroll {
+  display: flex;
+  overflow: hidden; /* Hide the horizontal scrollbar */
+  scroll-behavior: smooth;
+  white-space: nowrap; /* Prevent items from wrapping to the next line */
+  will-change: transform; /* Optimize for smooth animations */
+}
+
+.userdashboard-markets-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.userdashboard-markets-row {
+  display: flex;
+  align-items: center;
+  min-width: 200px; /* Adjust based on how wide each item should be */
+  padding: 10px;
+  margin: 0 10px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgb(249, 231, 131) ;
+  border: 1.5px solid gold;
+}
+
+.userdashboard-markets-row:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+.userdashboard-markets-col.positive {
+  color: green;
+}
+
+.userdashboard-markets-col.negative {
+  color: red;
+}

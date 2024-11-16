@@ -1,0 +1,202 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: space-evenly !important;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 100px !important;
+  background-color: transparent; /* Default background */
+}
+ 
+.nav-sidebar {
+  background-color: white; /* Background color for sidebar */
+ 
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
+  padding-top: 60px; /* Padding to push content down */
+}
+ 
+/* Logo styles */
+.logo {
+  font-size: 2rem !important;
+ 
+ 
+  display: flex;
+  justify-content: space-evenly;
+text-transform: uppercase;
+letter-spacing: 3px;
+ 
+ 
+}
+
+.logo .fotia-img .fotia-logo-img {
+  width: 90px;
+  height: auto; 
+  display: block; 
+  border-radius: 50%; 
+  margin: 20px auto; 
+  object-fit: cover; 
+  filter: brightness(1.2) contrast(1.1); 
+  transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.logo .fotia-img .fotia-logo-img:hover
+{
+  transform: scale(1.05); /* Slight zoom on hover */
+  cursor: pointer;
+  filter: drop-shadow(0 0 30px rgba(255, 223, 0, 0.9)) 
+          drop-shadow(0 0 40px rgba(255, 223, 0, 0.7)); /* Stronger glow on hover */
+}
+.logo .fotia-heading
+{
+  margin:40px 10px 30px;
+  font-weight:bolder;
+  text-transform:capitalize;
+  /* font-family: "Georgia", serif; */
+  font-family: 'UnifrakturMaguntia', Georgia, serif;
+  /* font-family: 'UnifrakturMaguntia', serif; */
+  /* font-family: 'Poppins', sans-serif; */
+  filter: brightness(1.2) contrast(1.1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  
+}
+.logo .fotia-heading:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  text-shadow: 0 0 15px rgba(245, 222, 179, 1),  /* Stronger Light Gold glow on hover */
+               0 0 25px rgba(218, 165, 32, 0.9), /* Metallic Gold inner glow */
+               0 0 40px rgba(184, 134, 11, 0.7); /* Dark Gold outer glow */
+  cursor: pointer;
+}
+ 
+/* Navigation links styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+ 
+}
+ 
+.nav-links li a {
+  text-decoration: none;
+  font-size: 18px;
+  
+  font-weight: bold;
+  color: var(--text-color);
+  transition: transform 0.3s ease;
+}
+ /* Active link styling */
+.nav-links li a.active {
+  color: orangered;
+  font-weight: bolder;
+
+}
+
+.nav-links li a:hover {
+  text-shadow: 0 0 10px rgba(245, 222, 179, 0.8), /* Inner Light Gold glow */
+  0 0 20px rgba(218, 165, 32, 0.6),  /* Mid-range Metallic Gold glow */
+  0 0 30px #FFD700; /* Outer Dark Gold glow */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+ 
+.nav-links li .sign-in {
+  padding: 8px 16px;
+  background-color: red;
+  font-size: 17px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+ 
+.nav-links li .sign-in:hover {
+  background-color: rgb(167, 29, 29);
+}
+ 
+/* Mobile Menu */
+.mobile-menu-icon {
+  display: none; /* Initially hidden */
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+ 
+.mobile-menu-icon:hover {
+  color: gold;
+}
+ 
+/* Media Queries */
+/* Ensure the nav links are hidden by default */
+@media (max-width: 848px) {
+  .nav-links {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px 0;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+    z-index: 999;
+    border-bottom: 2px solid var(--text-color);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Slide in from the top */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  }
+
+  /* When Mobile Menu is Active */
+  .nav-links.mobile-menu-active {
+    display: flex; /* Show nav links when active */
+    opacity: 1; /* Make the menu visible */
+    transform: translateY(0); /* Slide into place */
+  }
+
+  .logo .fotia-img .fotia-logo-img {
+    margin-top: 30px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo .fotia-heading {
+    margin: 40px 10px;
+    font-size: 35px;
+  }
+
+  /* Show Mobile Menu Icon when screen is small */
+  .mobile-menu-icon {
+    display: block; /* Show the menu icon when screen is small */
+  }
+
+  .navbar {
+    padding: 10px;
+    justify-content: space-between;
+  }
+}
+ 
+/* Keyframe animation (optional if you want to use it instead of transitions) */
+@keyframes slideDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+ 
+ 
+.nav-links.mobile-menu-active {
+  animation: slideDown 0.3s ease-in-out; /* Slide down animation */
+}
+ 

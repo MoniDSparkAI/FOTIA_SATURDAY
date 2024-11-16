@@ -1,0 +1,430 @@
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #000;
+  font-size: 2rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: red;
+  animation: dot-blink 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes dot-blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.loading-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  bottom: 0;
+  background-color:#fff;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+
+.userdashboard-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+}
+.top-bar-dash {
+  text-align: end;
+  padding: 10px;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  left: 0;
+}
+.home-link-dash {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+top: 10px;
+right: 0;
+margin-right: 30px;
+position:absolute;
+  font-size: 20px;
+
+  
+  font-weight: bold;
+  color: var(--text-color); /* Adjust based on your theme */
+}
+
+.home-link-dash:hover {
+  color: var(--text-color);
+  display: inline-block !important;
+  filter: brightness(1.2) contrast(1.1);
+  text-shadow: 0 0 10px rgba(245, 222, 179, 0.8),
+               0 0 20px rgba(218, 165, 32, 0.6),
+               0 0 30px #FFD700; /* Outer Dark Gold glow */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.userdashboard-sidebar {
+  width: 250px;
+  background-color:var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
+  border-right: 2px solid var(--text-color);
+}
+
+.userdashboard-logo {
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 20px 30px;
+  cursor: pointer;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  filter: brightness(1.2) contrast(1.1);
+  text-shadow: 0 0 10px rgba(245, 222, 179, 0.8), /* Inner Light Gold glow */
+               0 0 20px rgba(218, 165, 32, 0.6),  /* Mid-range Metallic Gold glow */
+               0 0 30px #FFD700; /* Outer Dark Gold glow */
+               transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.userdashboard-logo:hover
+  {
+    transform: scale(1.05); /* Slight zoom on hover */
+  filter: drop-shadow(0 0 30px rgba(255, 223, 0, 0.9)) 
+          drop-shadow(0 0 40px rgba(255, 223, 0, 0.7)); /* Stronger glow on hover */
+          cursor: pointer;
+  }
+.userdashboard-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.userdashboard-menu li {
+  margin: 15px 0;
+}
+
+.userdashboard-menu button {
+  width: 80%;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  color: var(--text-color);
+ 
+ margin: 0 20px;
+  cursor: pointer;
+}
+
+.userdashboard-menu button.active {
+  background-color: var(--text-color);
+  color: var(--background-color) ;
+  width: 80%;
+  
+
+}
+.userdashboard-menu button:hover
+{
+  transform: scale(1.05); /* Slight zoom on hover */
+  text-shadow: 0 0 10px rgba(245, 222, 179, 0.8), /* Inner Light Gold glow */
+  0 0 20px rgba(218, 165, 32, 0.6),  /* Mid-range Metallic Gold glow */
+  0 0 30px #FFD700; /* Outer Dark Gold glow */
+          cursor: pointer;
+}
+
+.userdashboard-main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--background-color);
+  overflow: auto;
+
+}
+
+.userdashboard-header {
+color: var(--text-color); /*  changes */
+
+ 
+}
+.userdashboard-header-head
+{
+  filter: brightness(1.2) contrast(1.1);
+  text-shadow: 0 0 10px rgba(245, 222, 179, 0.8), /* Inner Light Gold glow */
+               0 0 20px rgba(218, 165, 32, 0.6),  /* Mid-range Metallic Gold glow */
+               0 0 30px #FFD700; /* Outer Dark Gold glow */
+               transition: transform 0.3s ease, filter 0.3s ease;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.userdashboard-header-head:hover
+{
+  transform: scale(1.05); /* Slight zoom on hover */
+  cursor: pointer;
+}
+.userdashboard-header-content
+{
+ text-align: center;
+ margin: 10px 0;
+ 
+}
+.userdashboard-user-profile {
+  font-size: 16px;
+}
+
+.userdashboard-overview {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+.userdashboard-overview-item {
+  background-color: var(--text-color);
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 10px;
+  width: 20%;
+  
+  min-width: 200px; /* Ensure minimum width */
+  margin-bottom: 10px; /* Space between items */
+}
+
+.userdashboard-profit-loss.positive {
+  color: green;
+}
+
+.userdashboard-profit-loss.negative {
+  color: red;
+}
+
+.userdashboard-highchart-section,
+.userdashboard-markets-section,
+.userdashboard-btc-conversion {
+  margin-top: 20px;
+  background-color: var(--background-color);
+  box-shadow: 0px 4px 8px rgb(249, 231, 131) ;
+  border: 2px solid var(--text-color);
+  border-radius: 8px;
+  padding: 20px;
+  color: var(--text-color);
+}
+.dashboard-main
+{
+  margin-bottom: 20px;
+  
+}
+.userdashboard-auto-scroll {
+  overflow: auto;
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.userdashboard-btc-conversion {
+  display: flex;
+  flex-direction: column;
+}
+
+.userdashboard-conversion-type {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.userdashboard-conversion-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.userdashboard-conversion-form input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+
+
+.userdashboard-conversion-form h4 {
+  margin-top: 10px;
+}
+.network-section
+{
+  margin: 30px;
+  text-align: center;
+  color: var(--background-color); /*changes*/
+}
+/* Hamburger menu button */
+.hamburger-menu {
+  font-size: 40px;
+  align-items: end;
+  margin-right: -10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  display: none;
+ 
+}
+/* Apply custom styles to Highcharts container */
+.highcharts-container {
+  border: none;  /* Remove any default borders */
+  padding: 0;     /* Adjust padding if necessary */
+  background-color: var(--background-color) !important;  /* Ensure transparent background */
+}
+
+/* Customize title */
+.highcharts-title {
+  color: var(--text-color) !important;  /* Title text color */
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+
+/* Customize axis labels */
+.highcharts-xaxis-labels, .highcharts-yaxis-labels {
+  color: var(--text-color) !important;
+  font-size: 14px !important;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .userdashboard-overview {
+    flex-direction: column; /* Stack on larger tablets */
+    overflow-x: hidden;
+  }
+
+  .userdashboard-overview-item {
+    width: 100%; /* Full width on smaller screens */
+  }
+  .userdashboard-sidebar {
+    position: fixed;
+    top: -100%; /* Initially hide sidebar */
+    left: 0;
+    width: 100%; /* Full width for top menu */
+    height: auto; /* Adjust height as needed */
+
+    transition: top 0.3s ease; /* Smooth slide-in effect */
+    z-index: 1000;
+    margin-top: 100px;
+  }
+
+  .userdashboard-sidebar.open {
+    top: 0; /* Show sidebar */
+  }
+
+  .hamburger-menu {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+  
+    cursor: pointer;
+    z-index: 1100; /* Ensure it’s above other elements */
+  }
+
+
+  .userdashboard-main-content {
+    padding: 15px; /* Less padding on mobile */
+  }
+}
+
+
+
+  @media (max-width: 768px) {
+    .userdashboard-sidebar {
+      position: fixed;
+      top: -100%; /* Initially hide sidebar */
+      left: 0;
+      width: 100%; /* Full width for top menu */
+      height: auto; /* Adjust height as needed */
+   
+      transition: top 0.3s ease; /* Smooth slide-in effect */
+      z-index: 1000;
+      margin-top: 0;
+    }
+
+  
+    .userdashboard-sidebar.open {
+      top: 0; /* Show sidebar */
+  
+    }
+  
+    .hamburger-menu {
+      display: block;
+      font-size: 24px;
+      background: none;
+      border: none;
+    color: var(--text-color);
+      cursor: pointer;
+
+    }
+  
+  
+  
+
+  .userdashboard-main-content {
+    padding: 10px;
+    margin-left: 0; /* Remove space reserved for sidebar */
+  }
+
+  .userdashboard-header {
+ display: flex;
+ flex-direction: row;
+
+  }
+
+  .userdashboard-user-profile {
+    margin-bottom: 10px; /* Space for user profile */
+  }
+}
+
+@media (max-width: 480px) {
+  .userdashboard-menu button {
+    padding: 8px; /* Less padding for buttons */
+  }
+
+  .userdashboard-conversion-form input {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .userdashboard-conversion-form button {
+    font-size: 14px; /* Smaller button */
+  }
+
+  .userdashboard-overview {
+    flex-direction: column; /* Stack for small phones */
+    align-items: stretch; /* Align items to stretch */
+  }
+
+  .userdashboard-overview-item {
+    width: 100%; /* Full width for mobile */
+  }
+}
